@@ -57,7 +57,7 @@ export class CategoryComponent {
           this.CommonService.showAutoCloseAlert("warning","Warning","Cannot delete because it contains products");
         } else {
           if (
-            await this.CommonService.showConfirmation("warning", "Warning", "Oke", "Cancel")
+            await this.CommonService.showConfirmation("Warning", "Bạn có muốn xóa danh mục", "Oke", "Cancel")
           ) {
             this.categoryService.deleteCategory(id).subscribe(
               response => {

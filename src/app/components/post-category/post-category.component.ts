@@ -59,7 +59,7 @@ export class PostCategoryComponent {
 
   async deletePostCategory(id: number): Promise<void> {
     
-          if (await this.CommonService.showConfirmation("warning", "Warning", "Oke", "Cancel")) {
+          if (await this.CommonService.showConfirmation("warning", "Bạn có muốn xóa bài viết này", "Oke", "Cancel")) {
             this.postCategoryService.deletePostCategory(id).subscribe(
               response => {
                 this.CommonService.showAutoCloseAlert("success","Success","Delete post Successfully");
